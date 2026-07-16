@@ -1,65 +1,129 @@
-import Image from "next/image";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import ExperienceOrbs from "./components/ExperienceOrbs";
+
+const experience = [
+  {
+    company: "DigiKey",
+    role: "Software Engineer Intern (On-site)",
+    location: "Thief River Falls, Minnesota",
+    dates: "May 2026 – August 2026",
+    bullets: [
+      "Collaborated in an Agile/Scrumban environment, participating in sprint planning and daily standups.",
+      "Monitored and maintained Azure DevOps CI/CD pipelines, debugging and resolving failing builds or release steps to ensure reliable deployments.",
+      "Refactored existing methods to improve code maintainability, readability, and long-term supportability.",
+      "Leveraged AI agents & Azure DevOps MCP servers to streamline daily tasks.",
+      "Identified and remediated security issues using Snyk and SonarQube across supported codebases, resolving 300+ vulnerabilities in the process.",
+    ],
+  },
+  {
+    company: "AdPipe",
+    role: "Software Engineer Intern (Remote)",
+    location: "Athens, Georgia",
+    dates: "December 2024 – July 2025",
+    bullets: [
+      "Designed and implemented a prototype for Shot Boundary Detection to assess feasibility for in-house product integration.",
+      "Built Python-based benchmarking tools to evaluate detection accuracy and processing performance against existing solutions.",
+      "Presented results and technical recommendations to leadership, informing them of the feasibility of in-house development.",
+    ],
+  },
+  {
+    company: "ZieglerCat",
+    role: "Data Analyst Intern (Hybrid)",
+    location: "Bloomington, Minnesota",
+    dates: "June 2024 – October 2024",
+    bullets: [
+      "Maintained customer contact data in Dynamics Database with high accuracy.",
+      "Automated workflows using Excel scripts and macros, which resulted in a 40% increase in efficiency.",
+      "Processed and updated 800–1,000 contacts daily, reducing project completion time by 20%.",
+      "Optimized database operations to maintain reliable, up-to-date records for marketing initiatives.",
+    ],
+  },
+];
+
+const projects = [
+  {
+    name: "NBAStatsComprarator",
+    description: "Python based web scraper that allows users to compare NBA player stats.",
+    language: "Python",
+    url: "https://github.com/lancelisondra9/NBAStatsComprarator",
+  },
+  {
+    name: "PennyPilot",
+    description: "A budget tracking web application using Angular, Bootstrap, HTML, Google Firebase, and Google Firestore.",
+    language: "TypeScript",
+    url: "https://github.com/lancelisondra9/PennyPilot",
+  },
+  {
+    name: "PawfectMatch",
+    description: "Modern Software Development final project.",
+    language: "HTML",
+    url: "https://github.com/TyBuechler/PawfectMatch",
+  },
+  {
+    name: "Shot_Eval",
+    description: "Compares a modified version of PySceneDetect against AWS Rekognition for shot boundary detection.",
+    language: "Python",
+    url: "https://github.com/lancelisondra9/Shot_Eval",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-16 px-6 py-20 sm:px-10">
+      <header className="flex flex-col gap-4">
+        <h1 className="text-3xl font-semibold">Lance Lisondra</h1>
+        <p className="text-sm font-medium uppercase tracking-wide text-accent">Software Engineer</p>
+        <p className="max-w-prose text-base leading-relaxed text-white/80">
+          Hi! I&apos;m Lance, a Software Engineer currently looking for jobs because I need money
+          to pay my bills.
+        </p>
+        <div className="flex gap-4 text-sm">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/lancelisondra9"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-accent"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            <FaGithub aria-hidden />
+            GitHub
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/lance-lisondra-b4831b226/"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-accent"
           >
-            Documentation
+            <FaLinkedin aria-hidden />
+            LinkedIn
           </a>
         </div>
-      </main>
-    </div>
+      </header>
+
+      <section className="flex flex-col gap-6">
+        <h2 className="text-xl font-semibold text-accent">Experience</h2>
+        <ExperienceOrbs jobs={experience} />
+      </section>
+
+      <section className="flex flex-col gap-6">
+        <h2 className="text-xl font-semibold text-accent">Projects</h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {projects.map((project) => (
+            <a
+              key={project.name}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col gap-2 rounded-lg border border-zinc-200 bg-white/60 p-4 transition-colors hover:border-accent dark:border-zinc-800 dark:bg-white/5 dark:hover:border-accent"
+            >
+              <h3 className="font-medium">{project.name}</h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">{project.description}</p>
+              <span className="w-fit rounded-full bg-accent/10 px-2 py-0.5 text-xs text-accent">
+                {project.language}
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
