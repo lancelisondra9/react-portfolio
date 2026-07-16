@@ -75,7 +75,8 @@ export default function Home() {
         <p className="text-sm font-medium uppercase tracking-wide text-accent">Software Engineer</p>
         <p className="max-w-prose text-base leading-relaxed text-white/80">
           Hi! I&apos;m Lance, a Software Engineer currently looking for jobs because I need money
-          to pay my bills.
+          to pay my bills. In my free time I&apos;m an avid reader/writer, amateur pickleballer,
+          and amateur cook.
         </p>
         <div className="flex gap-4 text-sm">
           <a
